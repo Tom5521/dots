@@ -13,9 +13,8 @@ set PATH $HOME/go/bin $HOME/bin $PATH
 set XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
 
 # Until they fix the compilation with clang, this will always be g++
-function hyprpm;CXX=g++ $PREFIX/bin/hyprpm $argv;end
-function which;command -v $argv;end # Why the fuck which is deprecated?!?!?!
-function nvim;CC=$CC CXX=$CXX $PREFIX/bin/nvim $argv;end
+alias hyprpm "CXX=g++ $PREFIX/bin/hyprpm"
+alias which "command -v" # Why the fuck which is deprecated?!?!?!
 
 if status is-interactive
     set SKIP_GREETING 0 # 1 to disable usr and root grettings
