@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if command -v advcp >/dev/null; then
+  advcp -g $@
+else
+  /usr/bin/cp $@
+fi

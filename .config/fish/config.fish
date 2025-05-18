@@ -50,35 +50,6 @@ if status is-interactive
 
     set USR $USER
 
-    function mv
-        command -v advmv > /dev/null
-        if test $status -eq 0
-            echo $status
-            advmv -g $argv
-        else
-            $PREFIX/bin/mv $argv
-        end
-    end
-
-    function cp
-        command -v advcp > /dev/null
-        if test $status -eq 0
-            advcp -g $argv
-        else
-            $PREFIX/bin/cp $argv
-        end
-    end
-
-
-    function eza
-        command -v eza > /dev/null
-        if test $status -eq 0
-            $PREFIX/bin/eza --icons $argv
-        else
-            $PREFIX/bin/ls $argv
-        end
-    end
-
     # Abbreviations
     abbr --add mkd mkdir
     abbr --add inst yay -S
@@ -94,10 +65,9 @@ if status is-interactive
     abbr --add cdp cd $(pwd -P)
 
     # Aliases
-    alias ls eza
     alias cls clear
-    alias la "eza -la"
-    alias dir "ls --color"
+    alias la "ls -la"
+    alias dir "$PREFIX/usr/bin/ls --color"
     alias ddir dir
     alias please sudo
     alias s sudo
