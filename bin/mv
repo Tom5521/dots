@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if command -v advmv >/dev/null; then
+  advmv -g $@
+else
+  /usr/bin/mv $@
+fi
