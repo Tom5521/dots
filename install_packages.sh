@@ -11,7 +11,6 @@ pipewire_deps=(
 	gst-plugin-pipewire
 	libpipewire
 	libwireplumber
-	pipewire
 	pipewire-alsa
 	pipewire-audio
 	pipewire-docs
@@ -61,7 +60,6 @@ env_deps=(
 	hyprprop
 	walker-bin
 	glava
-	nwg-clipman
 	swww
 	waypaper
 	waybar-cava
@@ -108,45 +106,52 @@ usr_pkgs=(
 	scrcpy
 )
 
-yesno() {
-	whiptail --title "Install Packages" --yesno "$1" 8 39
-	return $?
-}
-
 pkg_install() {
 	yay -S --needed "$@" --noconfirm
 }
 
 main() {
+	password=$(mktemp)
+
+	dialog --insecure --title "Enter sudo password" --passwordbox "" 0 0 2>"$password"
+	ok=$?
+	clear
+	sudo -v -S <"$password"
+	rm "$password"
+
+	if [ $ok -ne 0 ]; then
+		return
+	fi
+
+	opts=$(
+		dialog --separate-output --checklist "Select the options" 0 0 0 1 "System dependencies" on \
+			2 "Pipewire dependencies" off \
+			3 "Wayland dependencies" on \
+			4 "Programming language dependencies" on \
+			5 "Environment dependencies" on \
+			6 "Custom linux kernel" off \
+			7 "User packages" off \
+			3>&1 1>&2 2>&3
+	)
+	clear
+
+	ok=$?
+	if [ $ok -ne 0 ]; then
+		return
+	fi
+
 	yay -Sy
-
-	if yesno "Install system dependencies?"; then
-		pkg_install "${system_deps[@]}"
-	fi
-
-	if yesno "Install pipewire dependencies?"; then
-		pkg_install "${pipewire_deps[@]}"
-	fi
-
-	if yesno "Install wayland dependencies?"; then
-		pkg_install "${wayland_deps[@]}"
-	fi
-
-	if yesno "Install language dependencies?"; then
-		pkg_install "${lang_deps[@]}"
-	fi
-
-	if yesno "Install environment dependencies?"; then
-		pkg_install "${env_deps[@]}"
-	fi
-
-	if yesno "Install custom linux kernel?"; then
-		pkg_install "${custom_kernel_pkgs[@]}"
-	fi
-
-	if yesno "Install user packages?"; then
-		pkg_install "${usr_pkgs[@]}"
-	fi
+	for opt in $opts; do
+		case $opt in
+		1) pkg_install "${system_deps[@]}" ;;
+		2) pkg_install "${pipewire_deps[@]}" ;;
+		3) pkg_install "${wayland_deps[@]}" ;;
+		4) pkg_install "${lang_deps[@]}" ;;
+		5) pkg_install "${env_deps[@]}" ;;
+		6) pkg_install "${custom_kernel_pkgs[@]}" ;;
+		7) pkg_install "${usr_pkgs[@]}" ;;
+		esac
+	done
 }
 
 main
