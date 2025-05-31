@@ -111,13 +111,14 @@ pkg_install() {
 }
 
 main() {
-	password=$(mktemp)
-
-	dialog --insecure --title "Enter sudo password" --passwordbox "" 0 0 2>"$password"
+	password=$(
+		dialog --insecure --title "Enter sudo password" --passwordbox "" \
+			0 0 \
+			3>&1 1>&2 2>&3
+	)
 	ok=$?
 	clear
-	sudo -v -S <"$password"
-	rm "$password"
+	echo "$password" | sudo -v -S
 
 	if [ $ok -ne 0 ]; then
 		return
