@@ -133,13 +133,13 @@ main() {
 			7 "User packages" off \
 			3>&1 1>&2 2>&3
 	)
-	clear
-
 	ok=$?
 	if [ $ok -ne 0 ]; then
+		clear
 		return
 	fi
 
+	clear
 	yay -Sy
 	for opt in $opts; do
 		case $opt in
