@@ -108,6 +108,8 @@ if status is-interactive
     alias claer sl
     alias fdisk "sudo fdisk"
     alias neofetch hyfetch
+    alias gzip pigz
+    alias ncdu gdu
     
 
     if test (whoami) = "root"
