@@ -3,14 +3,14 @@ source $__fish_config_dir/check-termux.fish
 # C/C++ compilers
 #
 # I LOVE clang!
-set CC clang
-set CXX clang++
+set -x CC clang
+set -x CXX clang++
 
-set EDITOR nvim
+set -x EDITOR nvim
 
 # Add ~/go/bin/ and ~/bin to the PATH
-set PATH $HOME/go/bin $HOME/bin $PATH
-set XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
+set -x PATH $HOME/go/bin $HOME/bin $PATH
+set -x XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
 
 # Until they fix the compilation with clang, this will always be g++
 alias hyprpm "CXX=g++ $PREFIX/bin/hyprpm"
