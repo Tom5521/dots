@@ -11,6 +11,7 @@ set -x EDITOR nvim
 # Add ~/go/bin/ and ~/bin to the PATH
 set -x PATH $HOME/go/bin $HOME/bin $PATH
 set -x XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
+set -x GITHUB_TOKEN $(gh auth token)
 
 # Until they fix the compilation with clang, this will always be g++
 alias hyprpm "CXX=g++ $PREFIX/bin/hyprpm"
