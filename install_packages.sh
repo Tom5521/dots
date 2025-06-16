@@ -78,7 +78,7 @@ env_deps=(
 
 	# CLI Utilities
 	eza downgrade github-cli cowsay lolcat wev pigz
-	trash-cli playerctl advcpmv npm wget w3m
+	trash-cli playerctl advcpmv npm wget w3m viu
 
 	# Network & Devices
 	network-manager-applet networkmanager kdeconnect kactivitymanagerd gnome-keyring
@@ -90,7 +90,7 @@ env_deps=(
 	noto-fonts adobe-source-code-pro-fonts adwaita-qt5-git adwaita-qt6-git ttf-firacode-nerd
 
 	# Misc
-	cliphist wl-clipboard mate-polkit
+	copyq mate-polkit
 )
 
 custom_kernel_pkgs=(
