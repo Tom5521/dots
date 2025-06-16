@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-hyprshot -m region --raw > \
-  "$(xdg-user-dir PICTURES)/Screenshots/\
+path="$(xdg-user-dir PICTURES)/Screenshots/\
   $(date +"%d-%m-%Y %H:%M:%S").png"
+
+hyprshot -m region --raw >"$path"
+copyq write image/png - <"$path"

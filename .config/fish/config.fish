@@ -94,7 +94,9 @@ if status is-interactive
     abbr --add i3cfg cd ~/.config/i3/
     abbr --add spacman sudo pacman
     abbr --add fishcfg cd ~/.config/fish/
-    abbr --add docker sudo docker
+    if not test (whoami) = "root"
+        abbr --add docker sudo docker
+    end
     abbr --add cdp cd $(pwd -P)
 
     # Aliases
