@@ -16,6 +16,7 @@ return {
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.sql" },
 	{ import = "astrocommunity.pack.java" },
+	-- { import = "astrocommunity.markdown-and-latex.vimtex" },
 
 	--INFO: COLORSHEMES
 	{ import = "astrocommunity.colorscheme.monokai-pro-nvim" },
