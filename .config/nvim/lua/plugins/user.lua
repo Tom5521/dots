@@ -92,4 +92,15 @@ return {
 		"numToStr/Comment.nvim",
 		enabled = true,
 	},
+	{
+		"lervag/vimtex",
+		ft = "tex",
+		-- tag = "v2.15", -- uncomment to pin to a specific release
+		init = function()
+			-- VimTeX configuration goes here, e.g.
+			vim.g.vimtex_compiler_method = "tectonic"
+			vim.g.vimtex_view_method = "zathura"
+			vim.g.vimtex_view_general_viewer = "okular"
+		end,
+	},
 }
