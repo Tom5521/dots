@@ -9,7 +9,7 @@ set -x CXX clang++
 set -x EDITOR nvim
 
 # Add ~/go/bin/ and ~/bin to the PATH
-set -x PATH $HOME/go/bin $HOME/bin $PATH
+set -x PATH  $PATH $HOME/go/bin $HOME/bin $HOME/.local/bin $HOME/.cargo/bin
 set -x XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
 
 # Until they fix the compilation with clang, this will always be g++
