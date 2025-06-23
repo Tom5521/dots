@@ -77,7 +77,7 @@ if status is-interactive
     function eza
         command -v eza > /dev/null
         if test $status -eq 0
-            eza --icons $argv
+            command eza --icons $argv
         else
             $PREFIX/bin/ls $argv
         end
