@@ -116,6 +116,7 @@ if status is-interactive
     alias neofetch hyfetch
     alias gzip pigz
     alias ncdu gdu
+    alias nextonic "tectonic -X"
     
 
     if test (whoami) = "root"
