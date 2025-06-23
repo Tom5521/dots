@@ -17,7 +17,7 @@ alias hyprpm "CXX=g++ $PREFIX/bin/hyprpm"
 alias which "command -v" # Why the fuck which is deprecated?!?!?!
 
 if not test (whoami) = "root"
-    set -x GITHUB_TOKEN $(gh auth token)
+    set -x GITHUB_TOKEN $(cat $__fish_config_dir/secrets/gh-key.txt)
 end
 
 if status is-interactive
@@ -38,9 +38,6 @@ if status is-interactive
         end
         echo
     end
-    function get-public-ip
-        ip addr show wlan0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1 
-    end
     function see-starwars
         telnet towel.blinkenlights.nl $argv
     end
@@ -57,7 +54,6 @@ if status is-interactive
     function mv
         command -v advmv > /dev/null
         if test $status -eq 0
-            echo $status
             advmv -g $argv
         else
             $PREFIX/bin/mv $argv

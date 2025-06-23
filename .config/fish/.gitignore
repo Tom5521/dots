@@ -1,3 +1,4 @@
+secrets
 *.tmp.*
 *.bak
 fish_variables
