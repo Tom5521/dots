@@ -2,6 +2,14 @@ return {
 	"AstroNvim/astrolsp",
 	opts = {
 		config = {
+			ltex = {
+				settings = {
+					ltex = {
+						language = "es",
+					},
+				},
+			},
+			--[[ 			
 			textlsp = {
 				settings = {
 					textLSP = {
@@ -11,7 +19,7 @@ return {
 								check_text = {
 									on_open = true,
 									on_save = true,
-									on_change = true,
+									on_change = false,
 								},
 							},
 						},
@@ -20,7 +28,7 @@ return {
 						},
 					},
 				},
-			},
+			}, ]]
 		},
 	},
 }
