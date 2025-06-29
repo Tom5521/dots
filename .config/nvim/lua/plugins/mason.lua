@@ -9,6 +9,12 @@ return {
 				"gofumpt",
 				"stylua",
 				"tree-sitter-cli",
+
+				-- Latex utilities.
+				"ltex-ls",
+				"ltex-ls-plus",
+				"texlab",
+				"tectonic",
 			},
 		},
 	},

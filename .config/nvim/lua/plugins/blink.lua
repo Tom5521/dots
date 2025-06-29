@@ -13,6 +13,7 @@ return {
 		fuzzy = { implementation = "prefer_rust" },
 		completion = {
 			menu = {
+				border = "single",
 				draw = {
 					columns = { { "kind_icon" }, { "label", gap = 1 } },
 					components = {

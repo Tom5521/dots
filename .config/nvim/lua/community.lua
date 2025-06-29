@@ -3,20 +3,19 @@ return {
 
 	-- INFO: LAUNGUAGE PACKS
 	{ import = "astrocommunity.pack.lua" },
-	{ import = "astrocommunity.pack.cpp" },
+	-- { import = "astrocommunity.pack.cpp" },
 	{ import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.pack.hyprlang" },
-	{ import = "astrocommunity.pack.html-css" },
+	-- { import = "astrocommunity.pack.html-css" },
 	{ import = "astrocommunity.pack.just" },
 	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.markdown" },
-	{ import = "astrocommunity.pack.python" },
-	{ import = "astrocommunity.pack.toml" },
+	-- { import = "astrocommunity.pack.python" },
+	-- { import = "astrocommunity.pack.toml" },
 	{ import = "astrocommunity.pack.yaml" },
 	{ import = "astrocommunity.pack.bash" },
-	{ import = "astrocommunity.pack.sql" },
-	{ import = "astrocommunity.pack.java" },
-	-- { import = "astrocommunity.markdown-and-latex.vimtex" },
+	-- { import = "astrocommunity.pack.sql" },
+	-- { import = "astrocommunity.pack.java" },
 
 	--INFO: COLORSHEMES
 	{ import = "astrocommunity.colorscheme.monokai-pro-nvim" },
