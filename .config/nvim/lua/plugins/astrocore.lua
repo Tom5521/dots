@@ -10,12 +10,10 @@ return {
 			highlighturl = true,                                       -- highlight URLs at start
 			notifications = true,                                      -- enable notifications at start
 		},
-		-- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
 		diagnostics = {
 			virtual_text = true,
 			underline = true,
 		},
-		-- vim options can be configured here
 		options = {
 			opt = {
 				relativenumber = false, -- sets vim.opt.relativenumber
@@ -24,24 +22,7 @@ return {
 				signcolumn = "yes", -- sets vim.opt.signcolumn to yes
 				wrap = true,        -- sets vim.opt.wrap
 			},
-			g = {                 -- vim.g.<key>
-			},
 		},
-		mappings = {
-			n = {
-				["<F6>"] = {
-					function()
-						vim.cmd("DiffviewOpen")
-					end,
-					desc = "Open Diffview",
-				},
-				["<Leader><F6>"] = {
-					function()
-						vim.cmd("DiffviewClose")
-					end,
-					desc = "Close Diffview",
-				},
-			},
-		},
+		mappings = {},
 	},
 }
