@@ -1,6 +1,15 @@
 return {
 	"AstroNvim/astrolsp",
+	---@type AstroLSPOpts
 	opts = {
+		mason_lspconfig = {
+			servers = {
+				just = {
+					package = "just-lsp",
+					filetypes = { "just" },
+				},
+			},
+		},
 		config = {
 			ltex = {
 				settings = {
@@ -9,26 +18,6 @@ return {
 					},
 				},
 			},
-			--[[ 			
-			textlsp = {
-				settings = {
-					textLSP = {
-						analysers = {
-							languagetool = {
-								enabled = true,
-								check_text = {
-									on_open = true,
-									on_save = true,
-									on_change = false,
-								},
-							},
-						},
-						documents = {
-							language = "auto:es",
-						},
-					},
-				},
-			}, ]]
 		},
 	},
 }
