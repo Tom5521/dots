@@ -15,6 +15,7 @@ return {
 				"ltex-ls-plus",
 				"texlab",
 				"tectonic",
+				"just-lsp",
 			},
 		},
 	},
