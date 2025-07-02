@@ -24,11 +24,11 @@ return {
 			devicons = true,
 			styles = {
 				comment = { italic = true },
-				keyword = { italic = true }, -- any other keyword
+				keyword = { italic = true },       -- any other keyword
 				type = { italic = true, bold = true }, -- (preferred) int, long, char, etc
-				storageclass = { italic = true }, -- static, register, volatile, etc
-				structure = { italic = true }, -- struct, union, enum, etc
-				parameter = { italic = true }, -- parameter pass in function
+				storageclass = { italic = true },  -- static, register, volatile, etc
+				structure = { italic = true },     -- struct, union, enum, etc
+				parameter = { italic = true },     -- parameter pass in function
 				annotation = { italic = true },
 				tag_attribute = { italic = true }, -- attribute of tag in reactjs
 			},
@@ -97,6 +97,14 @@ return {
 			vim.g.vimtex_compiler_method = "tectonic"
 			vim.g.vimtex_view_method = "zathura"
 			vim.g.vimtex_view_general_viewer = "okular"
+		end,
+	},
+	{
+		"kylechui/nvim-surround",
+		version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({})
 		end,
 	},
 }

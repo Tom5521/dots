@@ -5,7 +5,7 @@ return {
 			ltex = {
 				settings = {
 					ltex = {
-						language = "es",
+						language = "auto",
 					},
 				},
 			},
