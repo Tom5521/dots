@@ -27,14 +27,7 @@
       "urgency": "Normal"
     }
   },
-  "widgets": [
-    "label",
-    "volume",
-    "mpris",
-    "title",
-    "dnd",
-    "notifications"
-  ],
+  "widgets": ["label", "volume", "mpris", "title", "dnd", "notifications"],
   "widget-config": {
     "title": {
       "text": "Notifications",
