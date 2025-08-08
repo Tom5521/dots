@@ -68,17 +68,17 @@ qt_deps=(
 env_deps=(
 	# Compositor & Environment
 	hyprland swaync nwg-look nwg-clipman hyprshade hyprprop
-	gtklock gtklock grim slurp glava glava swww wofi
+	gtklock gtklock grim slurp swww wofi
 	waybar-cava waybar-module-pacman-updates-git waypaper
 
 	# GUI Apps
 	kitty neovim neovide ghex gdu reflector zenity yad
 	mpv gnome-calculator engrampa gimp vlc gthumb btop
-	kate okular kdenlive audacity obs-studio
+	kate okular kdenlive audacity obs-studio walker
 
 	# CLI Utilities
 	eza downgrade github-cli cowsay lolcat wev pigz
-	trash-cli playerctl advcpmv npm wget w3m viu
+	trash-cli playerctl npm wget w3m viu
 
 	# Network & Devices
 	network-manager-applet networkmanager kdeconnect kactivitymanagerd gnome-keyring
@@ -108,7 +108,7 @@ usr_pkgs=(
 	mesa-utils preload obsidian ly libreoffice-fresh-es ntfs-3g
 	anydesk scrcpy anydesk-bin gparted grub-customizer virtualbox
 	virtualbox-guest-iso virtualbox-guest-utils virtualbox-host-dkms
-	vorta vmware-workstation wakatime
+	vorta vmware-workstation wakatime syncthing 
 
 	# Terminal & Shell
 	fish

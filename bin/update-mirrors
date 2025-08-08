@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Script to update Arch Linux mirrors with the 10 fastest using reflector
+
+# Check if the user has root privileges
+if [ "$(id -u)" -ne 0 ]; then
+  echo "This script must be run as root. Use 'sudo' or log in as root."
+  exit 1
+fi
+
+# Check if reflector is installed
+if ! command -v reflector &>/dev/null; then
+  echo "reflector is not installed. Installing now..."
+  pacman -Sy reflector --noconfirm
+  if [ $? -ne 0 ]; then
+    echo "Failed to install reflector. Aborting."
+    exit 1
+  fi
+fi
+
+# Backup the current mirrorlist
+echo "Creating a backup of the current mirrorlist..."
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+
+# Run reflector to fetch the 10 fastest mirrors
+echo "Finding the 10 fastest mirrors..."
+reflector \
+  --verbose \
+  --latest 20 \
+  --sort rate \
+  --save /etc/pacman.d/mirrorlist \
+  --protocol https \
+  --number 10 \
+  --country "United States,Canada,Mexico,Brazil,Germany,France,Spain,United Kingdom,Netherlands,Japan,Singapore,Australia" \
+  --age 12
+
+# Verify if reflector ran successfully
+if [ $? -eq 0 ]; then
+  echo "Mirrorlist successfully updated with the 10 fastest mirrors."
+  echo "A backup was created at /etc/pacman.d/mirrorlist.backup"
+else
+  echo "Failed to update the mirrorlist. Restoring backup..."
+  mv /etc/pacman.d/mirrorlist.backup /etc/pacman.d/mirrorlist
+  exit 1
+fi
+
+# Optional: Update the system with the new mirrors
+read -p "Do you want to update the system now? (y/N): " choice
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+  pacman -Syu --noconfirm
+fi
+
+exit 0
