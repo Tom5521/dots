@@ -1,0 +1,6 @@
+linux-xanmod-lts
+linux-xanmod-lts-headers
+linux
+linux-firmware
+linux-headers
+mkinitcpio-firmware

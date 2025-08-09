@@ -1,0 +1,9 @@
+lua
+lua51
+luarocks
+zig
+zls
+clang
+tree-sitter-lua
+go
+mingw-w64-gcc

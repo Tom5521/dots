@@ -14,6 +14,7 @@ _darcs
 \.gitmodules
 
 install_packages\.sh
+pkg-lists
 
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
