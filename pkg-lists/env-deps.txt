@@ -52,6 +52,7 @@ npm
 wget 
 w3m 
 viu
+pavucontrol
 
 network-manager-applet 
 networkmanager 
