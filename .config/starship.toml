@@ -30,6 +30,8 @@ $time\
 $line_break$character"""
 
 palette = 'gruvbox_dark'
+add_newline = false
+
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
