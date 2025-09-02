@@ -9,9 +9,9 @@ __new_alias_with_fallback ls eza "--icons" ls "-a"
 
 # Aliases
 ## Until they fix the compilation with clang, this will always be g++
-alias hyprpm "CXX=g++ $PREFIX/bin/hyprpm"
+alias hyprpm "CXX=g++ $(which hyprpm)"
 alias cls clear
-alias dir "$PREFIX/bin/ls --color"
+alias dir "$(which ls) --color"
 alias ddir dir
 alias please sudo
 alias poweroff "systemctl poweroff"

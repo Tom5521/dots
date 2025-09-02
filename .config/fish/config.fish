@@ -1,4 +1,3 @@
-source $__fish_config_dir/check-termux.fish
 source $__fish_config_dir/env.fish
 source $__fish_config_dir/util.fish
 
@@ -20,5 +19,4 @@ if status is-interactive
 
     source $__fish_config_dir/abbrevs.fish
     source $__fish_config_dir/aliases.fish
-
 end
