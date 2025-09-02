@@ -8,6 +8,11 @@ pkg_install() {
 }
 
 main() {
+	if ! command -v dialog >/dev/null; then
+		echo "dialog isn't installed!"
+		exit 1
+	fi
+
 	opts=$(
 		dialog --separate-output --checklist "Select the options" 0 0 0 1 "System dependencies" on \
 			2 "Pipewire dependencies" off \

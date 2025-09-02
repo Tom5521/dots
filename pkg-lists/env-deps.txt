@@ -38,6 +38,7 @@ meson
 cpio
 cmake
 uwsm
+starship
 
 eza 
 downgrade 
@@ -60,10 +61,8 @@ kdeconnect
 kactivitymanagerd 
 gnome-keyring
 
-thunar
-thunar-archive-plugin 
-thunar-media-tags-plugin
-thunar-volman
+nautilus
+nautilus-image-converter
 gvfs
 
 noto-fonts 
