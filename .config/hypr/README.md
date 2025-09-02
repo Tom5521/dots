@@ -20,9 +20,7 @@ just install
 
 ![Screenshot](./screenshots/Screenshot4.png)
 
-
 https://github.com/user-attachments/assets/e81512cf-3eaa-4534-85f7-dd55534dd79e
-
 
 Current theme: Material Black Cherry
 
@@ -62,7 +60,7 @@ Mouse: Empty Butterfly White vr6
 | `$mainMod + D`                        | Launch `walker` program                               |
 | `$mainMod + Enter`                    | Launch `kitty` terminal                               |
 | `$mainMod + O`                        | Launch `nwg-look` to change GTK themes                |
-| `$mainMod + F`                        | Launch `thunar` file manager                          |
+| `$mainMod + F`                        | Launch `nautilus` file manager                        |
 | `$mainMod + C`                        | Launch Neovim                                         |
 | `$mainMod + SHIFT + C`                | Launch VSCode                                         |
 | `Print`                               | Capture screenshot using `grim`                       |

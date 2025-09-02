@@ -61,9 +61,12 @@ kdeconnect
 kactivitymanagerd 
 gnome-keyring
 
-nautilus
-nautilus-image-converter
-gvfs
+thunar 
+gvfs 
+thunar-volman 
+thunar-archive-plugin 
+thunar-media-tags-plugin
+xarchiver
 
 noto-fonts 
 adobe-source-code-pro-fonts
