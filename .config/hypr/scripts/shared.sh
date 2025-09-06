@@ -30,3 +30,11 @@ Toggle() {
 		$SHELL -c "$cmd" || notify "Error starting $program [exit code $?]" &
 	fi
 }
+
+ToggleKitty() {
+	local cmd=$1
+	local class=$2
+	local kitty_args=$3
+
+	Toggle "$cmd" "kitty $kitty_args -T \"$class\" --class \"$class\" -e $SHELL -c \"$cmd\"" 1
+}

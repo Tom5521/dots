@@ -1,0 +1,13 @@
+## Configuration file for CAVA.
+# Remove the to change parameters.
+
+
+[general]
+framerate = 45
+
+autosens = 1
+
+sensitivity = 30
+
+bar_width = 1
+bar_spacing = 1
