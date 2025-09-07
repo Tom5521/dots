@@ -16,6 +16,7 @@ Toggle() {
 	local program="$1"
 	local cmd="$2"
 	local hide="$3"
+	local pkill_args=$4
 
 	notify() {
 		if [[ "$hide" != 1 ]]; then
@@ -23,7 +24,7 @@ Toggle() {
 		fi
 	}
 
-	if pkill -x "$program"; then
+	if pkill $pkill_args -x "$program"; then
 		notify "$program killed."
 	else
 		notify "Starting $program..."

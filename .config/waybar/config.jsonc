@@ -14,9 +14,7 @@
     "battery",
   ],
   "modules-center": [
-    "cava",
-    "hyprland/workspaces",
-    "cava"
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "group/gtray",

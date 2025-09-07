@@ -6,6 +6,7 @@ __new_alias_with_fallback neofetch hyfetch neofetch
 __new_alias_with_fallback mv "advmv -g" mv
 __new_alias_with_fallback cp "advcp -g" cp
 __new_alias_with_fallback ls "eza --icons" "ls -a"
+__new_alias_with_fallback sudo sudo-rs sudo
 
 # Aliases
 ## Until they fix the compilation with clang, this will always be g++
