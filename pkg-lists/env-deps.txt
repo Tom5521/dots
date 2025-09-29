@@ -4,6 +4,7 @@ nwg-look
 hyprshade 
 hyprprop
 hyprshot
+hyprpicker
 gtklock 
 grim 
 slurp 

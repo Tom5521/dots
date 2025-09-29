@@ -17,8 +17,8 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "group/gtray",
     "hyprland/window",
+    "group/gtray",
     "group/gclock"
   ],
   "include": "~/.config/waybar/modules.jsonc",

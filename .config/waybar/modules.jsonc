@@ -21,7 +21,7 @@
   },
   "hyprland/window": {
     "icon": true,
-    "max-length": 15,
+    "max-length": 20,
     "separate-outputs": true,
   },
   "tray": {
