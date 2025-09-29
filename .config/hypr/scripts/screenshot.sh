@@ -17,9 +17,11 @@ must_toggle_hyprshade
 must_toggle_hyprshade=$?
 
 main() {
-  local screenshot_path
-  screenshot_path="$(xdg-user-dir PICTURES)/Screenshots/\
-    $(date +"%d-%m-%Y %H:%M:%S").png"
+  local screenshot_file
+  screenshot_file="$(date +"%d-%m-%Y %H:%M:%S").png"
+  local screenshot_dir
+  screenshot_dir="$(xdg-user-dir PICTURES)/Screenshots"
+  local screenshot_path="$screenshot_dir/$screenshot_file"
 
   local current_shader
   if [ $must_toggle_hyprshade -eq 0 ]; then
@@ -27,20 +29,14 @@ main() {
     hyprshade off
   fi
 
-  hyprshot -m region --raw >"$screenshot_path"
-  sleep 1.5 # Wait til' the data is moved to the file.
+  hyprshot -m region -f "$screenshot_file" -o "$screenshot_dir" --freeze -s
 
   if [ $must_toggle_hyprshade -eq 0 ]; then
     hyprshade on "$current_shader"
   fi
 
-  # Operation cancelled.
-  if [[ "$(stat -c "%s" "$screenshot_path")" == "0" ]]; then
-    rm "$screenshot_path"
-    return
-  fi
-
   copyq write image/png - <"$screenshot_path"
+  copyq select 0
 }
 
 main
