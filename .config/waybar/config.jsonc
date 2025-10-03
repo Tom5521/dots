@@ -17,7 +17,6 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "hyprland/window",
     "group/gtray",
     "group/gclock"
   ],

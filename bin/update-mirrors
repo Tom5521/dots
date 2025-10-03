@@ -31,7 +31,7 @@ reflector \
   --save /etc/pacman.d/mirrorlist \
   --protocol https \
   --number 10 \
-  --country "United States,Canada,Mexico,Brazil,Germany,France,Spain,United Kingdom,Netherlands,Japan,Singapore,Australia" \
+  --country "Brazil,Chile,Worldwide" \
   --age 12
 
 # Verify if reflector ran successfully

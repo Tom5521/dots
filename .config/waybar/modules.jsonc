@@ -138,13 +138,10 @@
       "█"
     ],
   },
-  "custom/trayicon": {
-    "format": "󱊔",
-  },
   "group/gtray": {
     "orientation": "inherit",
     "modules": [
-      "custom/trayicon",
+      "hyprland/window",
       "tray"
     ],
     "drawer": {},
