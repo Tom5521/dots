@@ -21,7 +21,7 @@
   },
   "hyprland/window": {
     "icon": true,
-    "max-length": 20,
+    "max-length": 30,
     "separate-outputs": true,
   },
   "tray": {
@@ -49,11 +49,7 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}󰔄 {icon}",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", ""],
   },
   "pulseaudio": {
     // "scroll-step": 10, // %, can be a float
@@ -70,11 +66,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ],
+      "default": ["", "", ""],
     },
     "on-click": "pavucontrol",
   },
@@ -127,31 +119,16 @@
     "waves": false,
     "noise_reduction": 0.77,
     "input_delay": 0,
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ],
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
   "group/gtray": {
     "orientation": "inherit",
-    "modules": [
-      "hyprland/window",
-      "tray"
-    ],
+    "modules": ["hyprland/window", "tray"],
     "drawer": {},
   },
   "group/gclock": {
     "orientation": "inherit",
-    "modules": [
-      "clock",
-      "clock#2"
-    ],
+    "modules": ["clock", "clock#2"],
     "drawer": {},
   },
 }
