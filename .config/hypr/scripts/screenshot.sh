@@ -17,11 +17,10 @@ must_toggle_hyprshade
 must_toggle_hyprshade=$?
 
 main() {
-  local screenshot_file
-  screenshot_file="$(date +"%d-%m-%Y %H:%M:%S").png"
-  local screenshot_dir
-  screenshot_dir="$(xdg-user-dir PICTURES)/Screenshots"
-  local screenshot_path="$screenshot_dir/$screenshot_file"
+  local screenshot_path
+  screenshot_path="$(xdg-user-dir PICTURES)/Screenshots/$(date +"%d-%m-%Y %H:%M:%S").png"
+
+  mkdir -p "$(dirname "$screenshot_path")"
 
   local current_shader
   if [ $must_toggle_hyprshade -eq 0 ]; then
