@@ -1,11 +1,12 @@
+# First of all, start the homebrew environment if it exists.
+if test -e /home/linuxbrew
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+end
+
 source $__fish_config_dir/env.fish
 source $__fish_config_dir/util.fish
 
 starship init fish | source
-
-if test -e /home/linuxbrew
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-end
 
 if status is-interactive
     # tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Darkest --show_time=No --classic_prompt_separators=Angled --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Compact --icons='Many icons' --transient=No
