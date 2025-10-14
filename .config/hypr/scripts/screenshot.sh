@@ -29,7 +29,12 @@ main() {
     hyprshade off
   fi
 
-  hyprshot -m region -f "$screenshot_file" -o "$screenshot_dir" --freeze -s
+  hyprshot -m region --freeze -s --raw >"$screenshot_path"
+
+  # wait til' the writing is done
+  while lsof "$screenshot_path" >/dev/null 2>&1; do
+    sleep 0.1s
+  done
 
   if [ $must_toggle_hyprshade -eq 0 ]; then
     hyprshade on "$current_shader"
