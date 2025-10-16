@@ -14,6 +14,7 @@ waybar-cava
 waybar-module-pacman-updates-git 
 waypaper
 man
+lsof
 
 kitty 
 neovim 

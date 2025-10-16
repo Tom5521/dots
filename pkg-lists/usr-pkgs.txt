@@ -1,6 +1,5 @@
 upx
 vesktop
-vesktop 
 vi 
 vim 
 neovim 
@@ -40,7 +39,7 @@ sshfs
 anydesk
 fastfetch
 hyfetch
-
+vhs
 
 btrfs-progs
 audacity
