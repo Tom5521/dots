@@ -15,7 +15,7 @@ set -gx CXX clang++
 set -gx EDITOR nvim
 
 # Add ~/go/bin/ and ~/bin to the PATH
-set -gx PATH  $PATH $HOME/go/bin $HOME/bin $HOME/.local/bin $HOME/.cargo/bin
+set -gx PATH  $PATH $HOME/go/bin $HOME/bin $HOME/.local/bin $HOME/.cargo/bin /sbin/
 set -gx XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
 
 
