@@ -21,7 +21,6 @@ neovim
 neovide 
 ghex 
 gdu 
-reflector 
 zenity 
 yad
 mpv 
@@ -35,7 +34,7 @@ okular
 kdenlive 
 audacity 
 obs-studio 
-walker
+walker-bin
 meson
 cpio
 cmake
