@@ -8,7 +8,7 @@ return {
 			"bash",
 			"c",
 			"just",
-			"latex",
+			-- "latex",
 		},
 	},
 }
