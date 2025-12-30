@@ -7,14 +7,16 @@
   "modules-left": [
     "custom/notification",
     "pulseaudio",
-    "custom/updates",
+    // "custom/updates",
     "cpu",
     "memory",
     "temperature",
     "battery",
   ],
   "modules-center": [
+    // "cava",
     "hyprland/workspaces"
+    // "cava",
   ],
   "modules-right": [
     "group/gtray",
