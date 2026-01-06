@@ -1,7 +1,8 @@
 hyprland
 swaync 
 nwg-look 
-hyprshade 
+hyprshade
+hyprsunset
 hyprprop
 hyprshot
 hyprpicker

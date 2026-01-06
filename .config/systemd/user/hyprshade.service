@@ -1,7 +1,0 @@
-[Unit]
-Description=Apply screen filter
-
-[Service]
-Type=oneshot
-ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "Hyprland" ""
-ExecStart=/usr/bin/hyprshade auto
