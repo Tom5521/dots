@@ -22,6 +22,7 @@ main() {
 			6 "Custom linux kernel" off \
 			7 "User packages" off \
 			8 "QT dependencies" off \
+			9 "AMD GPU dependencies" off \
 			3>&1 1>&2 2>&3
 	)
 	ok=$?
@@ -54,6 +55,7 @@ main() {
 		6) pkg_install "kernel-pkgs" ;;
 		7) pkg_install "usr-pkgs" ;;
 		8) pkg_install "qt-deps" ;;
+		9) pkg_install "amdgpu-deps" ;;
 		esac
 	done
 }
