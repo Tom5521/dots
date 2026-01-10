@@ -22,6 +22,6 @@ set -gx XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
 alias which "command -v" # Why the fuck which is deprecated?!?!?!
 
 set -l gh_key_path $__fish_config_dir/secrets/gh-key.txt 
-if test (whoami) != "root";and test -e $gh_key_path
+if test -e $gh_key_path
     set -x GH_TOKEN (cat $gh_key_path)
 end
