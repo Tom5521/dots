@@ -14,7 +14,9 @@ stow .
 
 
 
-https://github.com/user-attachments/assets/e7b4e41c-196e-4cd5-a45f-ee22bd311901
+
+https://github.com/user-attachments/assets/3b9041a3-a3f0-456c-9399-bca0904e994a
+
 
 
 
