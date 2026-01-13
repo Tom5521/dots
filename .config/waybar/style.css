@@ -85,6 +85,7 @@
 #custom-updates,
 #clock,
 #window,
+/* #cava, */
 #temperature {
   margin: 4px 2px;
   padding: 0 6px;
@@ -99,6 +100,10 @@
 
 #pulseaudio.bluetooth {
   color: @base0C;
+}
+
+#cava{
+  font-size: 10pt;
 }
 
 #clock {

@@ -1,13 +1,12 @@
-## Configuration file for CAVA.
-# Remove the to change parameters.
-
-
 [general]
-framerate = 45
-
+live-config = 1
+framerate = 60
 autosens = 1
-
-sensitivity = 30
-
+sensitivity = 50
 bar_width = 1
-bar_spacing = 1
+bar_spacing = 0
+
+
+[smoothing]
+monstercat = 0 
+waves = 0
