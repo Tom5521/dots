@@ -10,7 +10,7 @@ return {
 				},
 			},
 		}, ]]
-		config = {
+		servers = {
 			ltex = {
 				settings = {
 					ltex = {
