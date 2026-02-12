@@ -15,10 +15,7 @@ return {
       timeout_ms = 2000, -- default format timeout
     },
     -- enable servers that you already have installed without mason
-    servers = {
-      "ltex",
-      "gopls",
-    },
+    servers = {},
     ---@diagnostic disable: missing-fields
     config = {
       ltex = {
