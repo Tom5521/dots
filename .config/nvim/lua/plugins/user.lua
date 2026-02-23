@@ -105,4 +105,33 @@ return {
     event = "VeryLazy",
     config = function() require("nvim-surround").setup {} end,
   },
+  {
+    "dgox16/oldworld.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      variant = "cooler",
+    },
+  },
+  {
+    "everviolet/nvim",
+    name = "evergarden",
+    priority = 1000,
+    opts = {
+      theme = {
+        variant = "winter",
+        accent = "green",
+      },
+    },
+  },
+  -- Disable resession.
+  {
+    "stevearc/resession.nvim",
+    enabled = false,
+  },
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    opts = {},
+  },
 }

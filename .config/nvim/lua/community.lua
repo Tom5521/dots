@@ -8,7 +8,7 @@ return {
   { import = "astrocommunity.pack.hyprlang" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.just" },
-  -- { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python" },
@@ -17,7 +17,7 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.sql" },
   -- { import = "astrocommunity.pack.java" },
-  -- { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.zig" },
 
   --INFO: COLORSHEMES
   { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
@@ -40,4 +40,6 @@ return {
   --INFO: RECIPES
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
   { import = "astrocommunity.recipes.neovide" },
+  -- INFO: BORDERS
+  -- { import = "astrocommunity.recipes.disable-borders" },
 }

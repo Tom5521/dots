@@ -23,6 +23,13 @@ return {
         wrap = true, -- sets vim.opt.wrap
       },
     },
-    mappings = {},
+    mappings = {
+      n = {
+        ["<leader>sl"] = { function() require("persistence").load() end },
+        ["<leader>ss"] = { function() require("persistence").select() end },
+        ["<leader>sL"] = { function() require("persistence").load { last = true } end },
+        ["<leader>sc"] = { function() require("persistence").stop() end },
+      },
+    },
   },
 }
