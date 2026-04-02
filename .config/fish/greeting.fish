@@ -6,6 +6,12 @@ function fish_greeting
     if test $SKIP_GREETING -eq 1
         return
     end
+    if not command -v lolcat > /dev/null
+        return
+    end
+    if not command -v cowsay > /dev/null
+        return
+    end
     set -l cows ~/.config/fish
     # In this case, this files **MUST** be in /root/.config/fish directory, for security reasons
     if test (whoami) = "root"

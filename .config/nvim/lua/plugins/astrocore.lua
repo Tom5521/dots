@@ -25,10 +25,10 @@ return {
     },
     mappings = {
       n = {
-        ["<leader>sl"] = { function() require("persistence").load() end },
-        ["<leader>ss"] = { function() require("persistence").select() end },
-        ["<leader>sL"] = { function() require("persistence").load { last = true } end },
-        ["<leader>sc"] = { function() require("persistence").stop() end },
+        ["<leader>sl"] = { function() require("persistence").load() end, desc = "Persistence load" },
+        ["<leader>ss"] = { function() require("persistence").select() end, desc = "Persistence select" },
+        ["<leader>sL"] = { function() require("persistence").load { last = true } end, desc = "Persistence load last" },
+        ["<leader>sc"] = { function() require("persistence").stop() end, desc = "Persistence stop" },
       },
     },
   },

@@ -1,5 +1,7 @@
 return {
   "AstroNvim/astrocommunity",
+  -- INFO: LSP
+  { import = "astrocommunity.lsp.lsp-signature-nvim" },
 
   -- INFO: LAUNGUAGE PACKS
   { import = "astrocommunity.pack.lua" },

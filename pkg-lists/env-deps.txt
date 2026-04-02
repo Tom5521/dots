@@ -17,6 +17,7 @@ waybar-module-pacman-updates-git
 waypaper
 man
 lsof
+rm-improved
 
 kitty 
 neovim 

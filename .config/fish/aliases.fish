@@ -8,6 +8,7 @@ __new_alias_with_fallback cp "advcp -g" cp
 __new_alias_with_fallback ls "eza --icons" "ls -a"
 # __new_alias_with_fallback sudo sudo-rs sudo
 __new_alias_with_fallback tree "eza -T" tree
+__new_alias_with_fallback rm "rip" rm
 
 # Aliases
 ## Until they fix the compilation with clang, this will always be g++

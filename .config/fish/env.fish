@@ -6,6 +6,10 @@ if not set -q PREFIX
   set PREFIX /
 end
 
+if test (uname -o) = "Msys"
+  set -gx XDG_CONFIG_HOME $HOME/.config
+end
+
 # C/C++ compilers
 #
 # I LOVE clang!

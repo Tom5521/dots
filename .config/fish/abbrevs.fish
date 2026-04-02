@@ -10,11 +10,10 @@ abbr --add i3cfg cd ~/.config/i3/
 abbr --add spacman sudo pacman
 abbr --add fishcfg cd ~/.config/fish/
 abbr --add s sudo
-abbr --add umount sudo umount
-abbr --add mount sudo mount
-abbr --add fdisk sudo fdisk
 abbr --add cdp cd (pwd -P)
-
 if not test (whoami) = "root"
-    abbr --add docker sudo docker
+  abbr --add umount sudo umount
+  abbr --add mount sudo mount
+  abbr --add fdisk sudo fdisk
+  abbr --add docker sudo docker
 end
