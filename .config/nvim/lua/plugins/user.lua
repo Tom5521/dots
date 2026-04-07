@@ -1,21 +1,10 @@
 return {
   {
-    "folke/snacks.nvim",
+    "LazyVim/LazyVim",
     opts = {
-      dashboard = {
-        preset = {
-          header = table.concat({
-            "███    ██ ██    ██ ██ ███    ███",
-            "████   ██ ██    ██ ██ ████  ████",
-            "██ ██  ██ ██    ██ ██ ██ ████ ██",
-            "██  ██ ██  ██  ██  ██ ██  ██  ██",
-            "██   ████   ████   ██ ██      ██",
-          }, "\n"),
-        },
-      },
+      colorscheme = "monokai-pro",
     },
   },
-
   {
     "loctvl842/monokai-pro.nvim",
     opts = {
@@ -49,7 +38,7 @@ return {
 
   {
     "jasonccox/vim-wayland-clipboard",
-    enabled = require("jit").os == "Linux" and os.getenv "XDG_SESSION_TYPE" == "wayland",
+    enabled = require("jit").os == "Linux" and os.getenv("XDG_SESSION_TYPE") == "wayland",
     lazy = false,
   },
   {
@@ -62,20 +51,13 @@ return {
     opts = {},
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
-  },
-  {
     "mtoohey31/cmp-fish",
     ft = "fish",
   },
-  {
-    "Snikimonkd/cmp-go-pkgs",
-    ft = "go",
-  },
+  --  {
+  --    "Snikimonkd/cmp-go-pkgs",
+  --    ft = "go",
+  --  },
   {
     "xzbdmw/colorful-menu.nvim",
     lazy = false,
@@ -103,7 +85,9 @@ return {
     "kylechui/nvim-surround",
     version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    config = function() require("nvim-surround").setup {} end,
+    config = function()
+      require("nvim-surround").setup({})
+    end,
   },
   {
     "dgox16/oldworld.nvim",
@@ -123,15 +107,5 @@ return {
         accent = "green",
       },
     },
-  },
-  -- Disable resession.
-  {
-    "stevearc/resession.nvim",
-    enabled = false,
-  },
-  {
-    "folke/persistence.nvim",
-    event = "BufReadPre",
-    opts = {},
   },
 }
