@@ -68,6 +68,7 @@ return {
   },
   {
     "numToStr/Comment.nvim",
+    opts = {},
     enabled = true,
   },
   --[[ 	{
@@ -81,13 +82,18 @@ return {
 			vim.g.vimtex_view_general_viewer = "okular"
 		end,
 	}, ]]
-  {
+  --[[  {
     "kylechui/nvim-surround",
-    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    version = "^4.0.0", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup({})
-    end,
+    opts = {
+
+    },
+  },--]]
+
+  {
+    "NStefan002/visual-surround.nvim",
+    opts = {},
   },
   {
     "dgox16/oldworld.nvim",
