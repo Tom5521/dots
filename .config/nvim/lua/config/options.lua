@@ -1,4 +1,5 @@
 local arch = require("jit").arch
+local sysos = require("jit").os
 
 if arch == ("arm" or "arm64") then
   print("You are on an ARM system, many of the functions are not going to work here...")
@@ -10,7 +11,11 @@ vim.opt.relativenumber = false
 vim.opt.list = false
 
 if vim.g.neovide then
-  vim.o.guifont = "FiraCode Nerd Font,JetBrains Mono:h11:h11"
+  if sysos ~= "Windows" then
+    vim.o.guifont = "FiraCode Nerd Font,JetBrains Mono:h11:h11"
+  else
+    vim.o.guifont = "FiraCode Nerd Font:h11"
+  end
   vim.g.neovide_confirm_quit = true
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_cursor_smooth_blink = true
@@ -18,4 +23,9 @@ if vim.g.neovide then
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_cursor_trail_size = 0.8
   vim.g.neovide_cursor_vfx_particle_density = 9.0
+
+  if os == "Windows" then
+    vsysos.g.neovide_normal_opacity = 1.0
+    vim.g.neovide_opacity = 1.0
+  end
 end
