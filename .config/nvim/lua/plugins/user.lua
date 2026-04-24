@@ -21,6 +21,15 @@ return {
         annotation = { italic = true },
         tag_attribute = { italic = true }, -- attribute of tag in reactjs
       },
+      override = function(scheme)
+        return {}
+      end,
+      override_palette = function(filter)
+        return {}
+      end,
+      override_scheme = function(scheme, palette, colors)
+        return {}
+      end,
     },
   },
   {

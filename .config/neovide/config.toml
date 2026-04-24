@@ -1,0 +1,12 @@
+[font]
+normal=["FiraCode Nerd Font"]
+size=11.0
+edging = "antialias"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
