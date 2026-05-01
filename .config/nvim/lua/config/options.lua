@@ -6,7 +6,6 @@ if jit.arch == ("arm" or "arm64") then
 end
 
 vim.opt.wrap = true
-vim.opt.relativenumber = false
 vim.opt.list = false
 
 if vim.g.neovide then
