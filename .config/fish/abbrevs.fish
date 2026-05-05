@@ -11,9 +11,9 @@ abbr --add spacman sudo pacman
 abbr --add fishcfg cd ~/.config/fish/
 abbr --add s sudo
 abbr --add cdp cd (pwd -P)
-if not test (whoami) = "root"
-  abbr --add umount sudo umount
-  abbr --add mount sudo mount
-  abbr --add fdisk sudo fdisk
-  abbr --add docker sudo docker
+if not test (whoami) = root
+    abbr --add umount sudo umount
+    abbr --add mount sudo mount
+    abbr --add fdisk sudo fdisk
+    abbr --add docker sudo docker
 end

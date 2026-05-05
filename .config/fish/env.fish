@@ -1,13 +1,13 @@
 if set -q TERMUX_VERSION
-  set IS_TERMUX 1
+    set IS_TERMUX 1
 end
 
 if not set -q PREFIX
-  set PREFIX /
+    set PREFIX /
 end
 
-if test (uname -o) = "Msys"
-  set -gx XDG_CONFIG_HOME $HOME/.config
+if test (uname -o) = Msys
+    set -gx XDG_CONFIG_HOME $HOME/.config
 end
 
 # C/C++ compilers
@@ -19,13 +19,13 @@ set -gx CXX clang++
 set -gx EDITOR nvim
 
 # Add ~/go/bin/ and ~/bin to the PATH
-set -gx PATH  $PATH $HOME/go/bin $HOME/bin $HOME/.local/bin $HOME/.cargo/bin /sbin/
+set -gx PATH $PATH $HOME/go/bin $HOME/bin $HOME/.local/bin $HOME/.cargo/bin /sbin/
+set -gx VCPKG_ROOT $HOME/.local/share/vcpkg
 set -gx XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
-
 
 alias which "command -v" # Why the fuck which is deprecated?!?!?!
 
-set -l gh_key_path $__fish_config_dir/secrets/gh-key.txt 
+set -l gh_key_path $__fish_config_dir/secrets/gh-key.txt
 if test -e $gh_key_path
     set -x GH_TOKEN (cat $gh_key_path)
 end

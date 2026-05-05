@@ -1,4 +1,3 @@
-
 alias see-starwars "telnet towel.blinkenlights.nl"
 
 __new_alias_with_fallback ncdu gdu ncdu
@@ -23,6 +22,6 @@ alias claer sl
 alias gzip pigz
 alias nextonic "tectonic -X"
 
-if test (whoami) = "root"
+if test (whoami) = root
     alias rm "rm -i"
 end
