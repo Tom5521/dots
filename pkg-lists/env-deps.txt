@@ -12,8 +12,7 @@ grim
 slurp 
 swww 
 wofi
-waybar-cava 
-waybar-module-pacman-updates-git 
+waybar
 waypaper
 man
 lsof

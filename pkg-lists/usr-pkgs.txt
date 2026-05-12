@@ -7,7 +7,7 @@ tmux
 perf 
 refind 
 rclone
-zen-browser-bin 
+zen-browser
 strawberry 
 pipes.sh 
 mesa-utils 
@@ -47,5 +47,3 @@ kdenlive
 obsidian 
 asciinema 
 aspell-es 
-aspell-pt 
-aspell-ru
