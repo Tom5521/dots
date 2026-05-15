@@ -1,0 +1,10 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=Waypaper
+
+[Service]
+ExecStart=/usr/bin/waypaper --restore
+RemainAfterExit=yes
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

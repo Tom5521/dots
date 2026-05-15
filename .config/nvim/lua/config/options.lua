@@ -8,6 +8,8 @@ end
 vim.opt.wrap = true
 vim.opt.list = false
 
+vim.opt.clipboard = "unnamedplus"
+
 if vim.g.neovide then
   vim.g.neovide_confirm_quit = true
   vim.g.neovide_remember_window_size = true

@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=Walker
+
+[Service]
+ExecStart=/usr/bin/walker --gapplication-service
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

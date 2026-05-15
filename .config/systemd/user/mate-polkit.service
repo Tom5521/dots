@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=Mate Polkit
+
+[Service]
+ExecStart=/usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

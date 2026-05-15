@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=Waybar
+
+[Service]
+ExecStart=/usr/bin/waybar
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

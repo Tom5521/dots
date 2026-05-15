@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=Hyprland Package Manager
+
+[Service]
+ExecStart=/usr/bin/hyprpm reload -n
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

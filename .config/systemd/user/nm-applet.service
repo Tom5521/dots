@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=Networkmanager Applet
+
+[Service]
+ExecStart=/usr/bin/nm-applet
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

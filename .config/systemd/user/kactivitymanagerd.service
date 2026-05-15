@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=KDE Activity Manager Daemon
+
+[Service]
+ExecStart=/usr/lib/kactivitymanagerd
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

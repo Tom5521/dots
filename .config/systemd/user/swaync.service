@@ -1,0 +1,9 @@
+[Unit]
+After=wayland-session@hyprland.desktop.target
+Description=SwayNC
+
+[Service]
+ExecStart=/usr/bin/swaync
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

@@ -44,12 +44,6 @@ return {
       direction = "float",
     },
   },
-
-  {
-    "jasonccox/vim-wayland-clipboard",
-    enabled = require("jit").os == "Linux" and os.getenv("XDG_SESSION_TYPE") == "wayland",
-    lazy = false,
-  },
   {
     "sphamba/smear-cursor.nvim",
     enabled = not vim.g.neovide,
