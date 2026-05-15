@@ -8,6 +8,10 @@ end
 vim.opt.wrap = true
 vim.opt.list = false
 
+if vim.fn.has("termguicolors") then
+  vim.opt.termguicolors = true
+end
+
 vim.opt.clipboard = "unnamedplus"
 
 if vim.g.neovide then
