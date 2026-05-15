@@ -1,9 +1,11 @@
 [Unit]
+PartOf=wayland-session@hyprland.desktop.target
 After=wayland-session@hyprland.desktop.target
 Description=CopyQ
 
 [Service]
 ExecStart=/usr/bin/copyq --start-server hide
+RemainAfterExit=yes
 
 [Install]
 WantedBy=wayland-session@hyprland.desktop.target

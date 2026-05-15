@@ -1,4 +1,5 @@
 [Unit]
+PartOf=wayland-session@hyprland.desktop.target
 After=wayland-session@hyprland.desktop.target
 Description=Networkmanager Applet
 
