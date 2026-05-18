@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ~/.config/hypr/scripts
+source ~/bash-libs/shared.sh
 
-source ./shared.sh
-
-Toggle glava glava 1
+toggle_program glava glava 1

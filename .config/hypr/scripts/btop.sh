@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ~/.config/hypr/scripts/
-source shared.sh
+source ~/bash-libs/shared.sh
 
-RunKitty "Btop" "btop"
+run_kitty "Btop" "btop"

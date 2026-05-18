@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ~/.config/hypr/scripts/
-source ./shared.sh
+source ~/bash-libs/shared.sh
 
-KITTY_DISABLE_WAYLAND=1 ToggleKitty cava GLava "--override background_opacity=0"
+KITTY_DISABLE_WAYLAND=1 toggle_kitty cava GLava "--override background_opacity=0"

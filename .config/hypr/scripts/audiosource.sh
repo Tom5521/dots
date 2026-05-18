@@ -1,13 +1,13 @@
 #!/bin/bash
 
-cd ~/.config/hypr/scripts/
-source ./shared.sh
+source ~/bash-libs/shared.sh
 
+cd ~/config/hypr/scripts/
 if [ ! -d "audiosource" ]; then
-	git clone https://github.com/gdzx/audiosource.git || exit $?
+  git clone https://github.com/gdzx/audiosource.git || exit $?
 fi
 
 program=audiosource
 cmd="$HOME/.config/hypr/scripts/audiosource/audiosource run"
 
-Toggle "$program" "$cmd"
+toggle_program "$program" "$cmd"

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cd ~/.config/hypr/scripts/
-source ./shared.sh
+source ~/bash-libs/shared.sh
 
-program=waybar
-exec_cmd="waybar"
-
-Toggle "$program" "$exec_cmd" 1
+toggle_service waybar
