@@ -4,6 +4,7 @@ format = """
 [](color_orange)\
 $os\
 $username\
+$hostname\
 $sudo\
 [](bg:color_yellow fg:color_orange)\
 $directory\
@@ -75,6 +76,13 @@ Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 Pop = ""
+
+[hostname]
+ssh_only = true
+ssh_symbol = " "
+disabled = false
+style = "bg:color_orange fg:color_fg0"
+format = "[on $hostname$ssh_symbol]($style)"
 
 [username]
 show_always = true
