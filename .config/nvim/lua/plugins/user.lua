@@ -52,4 +52,8 @@ return {
     "NStefan002/visual-surround.nvim",
     opts = {},
   },
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  },
 }
