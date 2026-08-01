@@ -12,6 +12,12 @@ hl.bind(ft("MAIN + SHIFT + J"), hl.dsp.layout("togglesplit"))
 hl.bind(ft("MAIN + F11"), hl.dsp.window.fullscreen())
 hl.bind(ft("MAIN + S"), hl.dsp.group.toggle())
 hl.bind(ft("MAIN + P"), hl.dsp.window.pin())
+hl.bind(ft("MAIN + period"), hl.dsp.layout("move +col"))
+hl.bind(ft("MAIN + comma"), hl.dsp.layout("move -col"))
+hl.bind(ft("MAIN + minus"), hl.dsp.layout("swapcol l"))
+hl.bind(ft("MAIN + SHIFT + minus"), hl.dsp.layout("swapcol r"))
+hl.bind(ft("MAIN + SHIFT + F"), hl.dsp.layout("fit all"))
+hl.bind(ft("MAIN + P"), hl.dsp.layout("promote"))
 
 local arrows = { up = "u", down = "d", left = "l", right = "r" }
 

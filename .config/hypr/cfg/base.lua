@@ -12,7 +12,8 @@ return {
 				colors = { "rgba(595959aa)" },
 			},
 		},
-		layout = "dwindle",
+		-- layout = "dwindle",
+		layout = "scrolling",
 	},
 	decoration = {
 		blur = {
@@ -30,6 +31,9 @@ return {
 		dim_strength = 0.2,
 	},
 
+	dwindle = {
+		preserve_split = true,
+	},
 	input = {
 		kb_layout = "es",
 		accel_profile = "adaptative",
@@ -45,9 +49,15 @@ return {
 	},
 
 	master = {
+		new_status = "slave",
 		orientation = "left",
 		new_on_top = true,
 		allow_small_split = true,
+	},
+	scrolling = {
+		direction = "right",
+		column_width = 0.99,
+		fullscreen_on_one_column = true,
 	},
 
 	animations = { enabled = true },
