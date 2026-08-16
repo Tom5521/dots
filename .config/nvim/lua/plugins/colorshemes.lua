@@ -1,7 +1,7 @@
 return {
-  {
+  --[[   {
     "nyoom-engineering/oxocarbon.nvim",
-  },
+  }, ]]
   {
     "sainnhe/sonokai",
     config = function()
