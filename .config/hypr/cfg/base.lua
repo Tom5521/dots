@@ -35,7 +35,8 @@ return {
 		preserve_split = true,
 	},
 	input = {
-		kb_layout = "es",
+		kb_layout = "us",
+		kb_variant = "colemak",
 		accel_profile = "adaptative",
 	},
 
