@@ -36,7 +36,9 @@ return {
 	},
 	input = {
 		kb_layout = "us",
-		kb_variant = "colemak",
+		kb_model = "pc105",
+		kb_variant = "altgr-intl",
+		-- kb_variant = "colemak",
 		accel_profile = "adaptative",
 	},
 
